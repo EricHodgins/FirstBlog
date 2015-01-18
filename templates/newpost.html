@@ -1,0 +1,44 @@
+<!DOCTYPE>
+
+<html>
+	<head>	
+		<title>New Post</title>
+	</head>	
+	<style type="text/css">
+
+		body {
+			margin: 0 20%;
+			background-color: #FFFFD0;
+		}
+
+		textarea {
+			font-family: sans-serif;
+			width: 800px;
+			height: 500px;
+			background-color: #FFFFE0;
+		}
+
+		.error {
+			color: red;
+		}
+	</style>
+	<body>
+		<h1>Eric's Very First Blog!...enter new post</h1>
+
+		<form method="post">
+			<label>
+				<div>Subject:</div>
+				<input type="subject" name="subject" value="{{title}}">
+			</label>
+			<label>
+				<div>Blog:</div>
+				<textarea name="content">{{blog_entry}}</textarea>
+			</label>
+
+			<div class="error">
+				<p>{{error}}</p>
+			</div>
+			<input type="submit">
+		</form>
+	</body>
+</html>

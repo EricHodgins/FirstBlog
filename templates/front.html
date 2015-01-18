@@ -1,0 +1,42 @@
+<!DOCTYPE>
+
+<html>
+	<head>	
+		<title>Blog 1</title>
+	</head>	
+	<style type="text/css">
+		body {
+			width: 60%;
+			margin-left: 20%;
+		}
+
+		.title {
+			float: left;
+			margin-right: 50%;
+			font-weight: bold;
+		}
+
+		.date {
+			text-align: right;
+		}
+
+		hr {
+			height: 5px;
+			background-color: black;
+		}
+
+	</style>
+	<body>
+
+		{% for blog in blogs %}
+			<div>
+				<label>
+					<div class="title">{{blog.title}}</div>
+					<div class="date">{{blog.created.strftime("%b %d, %Y")}}</div>
+					<hr>
+					</label>
+					<p>{{blog.render() | safe}}</p>
+			</div>
+		{% endfor %}
+	</body>
+</html>
